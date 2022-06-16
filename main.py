@@ -1,10 +1,36 @@
-import random
+#!/bin/env python 
+import sys
 import time
+import random
 
-map_size = 100
+# Clear any argv entries that aren't the user's args
+try:
+    sys.argv.remove("python")
+except ValueError:
+    pass
+try:
+    sys.argv.remove("python3")
+except ValueError:
+    pass
+try:
+    sys.argv.remove(sys.argv[0])
+except ValueError:
+    pass
+
+map_size = 100 if len(sys.argv) < 1 else sys.argv[0]
+try:
+    map_size = int(map_size)
+except ValueError:
+    print("Please enter an integer for the size!")
+    exit()
 map_size += 2
 
-intensity = 0.5
+intensity = 0.5 if len(sys.argv) < 2 else sys.argv[1]
+try:
+    intensity = float(intensity)
+except ValueError:
+    print("Please enter a float for the intensity!")
+    exit()
 animation = False
 
 map=[]
