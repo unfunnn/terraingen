@@ -26,3 +26,5 @@ You will need an ANSI colour supporting terminal for this since I challenged mys
 - Run the file!
 
 There is also an "animation" variable at the top, if you're curious you can turn it on for smaller map sizes (larger maps have intense flicker due to this being in the terminal)
+## References
+https://jeremykun.com/2012/07/29/the-cellular-automaton-method-for-cave-generation/
